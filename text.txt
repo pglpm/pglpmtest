@@ -1,3 +1,4 @@
 add line before
 txt file
 added one line
+add a fourth line
