@@ -2,6 +2,7 @@
 ^\.gitignore$
 ^\.backups$
 ^\.directory$
+^tools$
 ^tests$
 ^test_applications$
 ^proto_package$
