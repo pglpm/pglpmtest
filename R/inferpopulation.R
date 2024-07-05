@@ -37,6 +37,7 @@
 #' @param cleanup Bool, default TRUE, removes files that can be used for
 #'   debugging
 #' @return name of directory containing output files, or Fdistribution object, or empty
+#' @export
 #' @import foreach doParallel doRNG data.table LaplacesDemon
 inferpopulation <- function(data, metadata, outputdir, nsamples = 1200,
                             nchains = 120, nsamplesperchain = 10, parallel = TRUE,
