@@ -1,7 +1,12 @@
-# Function to build metadata file from input data.
-# @param data is either a file or a data.table object.
-# @param file is an optional parameter for the filename
-#
+#' Build preliminary metadata flie
+#'
+#' @param data data.frame object or filepath
+#' @param file string: name of output metadata file; NULL: output metadata as data.frame
+#' @param diagnosticvalues Bool: also output some diagnostic statistics?
+#' @param backupfiles Bool: rename previous metadata file if it exists?
+#' @return nothing or data.table object
+#' @export
+#' @import foreach doParallel doRNG data.table LaplacesDemon
 buildmetadata <- function(data, file = NULL, diagnosticvalues = FALSE,
                           backupfiles = FALSE) {
   require('data.table')
