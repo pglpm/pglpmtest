@@ -4,10 +4,13 @@
 #' @param file string: name of output metadata file; NULL: output metadata as data.frame
 #' @param diagnosticvalues Bool: also output some diagnostic statistics?
 #' @param backupfiles Bool: rename previous metadata file if it exists?
+#'
 #' @return nothing or data.table object
 #' @export
-#' @import foreach doParallel doRNG data.table LaplacesDemon
-buildmetadata <- function(data, file = NULL, diagnosticvalues = FALSE,
+#'
+#' @import data.table
+buildmetadata <- function(data, file = NULL,
+                          diagnosticvalues = FALSE,
                           backupfiles = FALSE) {
   require('data.table')
 
@@ -37,7 +40,7 @@ buildmetadata <- function(data, file = NULL, diagnosticvalues = FALSE,
               '\nDiscarded because non-informative\n')
       next
     }
-    # If the data is numeric, calculate the variation in the data 
+    # If the data is numeric, calculate the variation in the data
     # (first and second quartile, min and max values)
     if (is.numeric(x)) {
       ## print('numeric')

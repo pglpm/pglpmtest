@@ -1,7 +1,6 @@
 #' Monte Carlo computation of posterior distribution of population frequencies
 #'
-#' @param data data.table object or filepath ##Can we make it so that this
-#'   HAS to be data.table?
+#' @param data data.table object or filepath: datapoints
 #' @param metadata Either the name of the csv file containing metadata
 #'   of the current dataset, or a data.frame with the metadata
 #' @param outputdir String, path to output file folder ## Rename to
@@ -1612,8 +1611,8 @@ inferpopulation <- function(data, metadata, outputdir, nsamples = 1200,
       ##                              mcsamples=mcsubset(allmcsamples,subsamples),
       ##                              auxmetadata=auxmetadata,
       ##                              data=data,
-      ##                              plotuncertainty='samples',
-      ##                              uncertainty=showsamples,
+      ##                              plotvariability='samples',
+      ##                              nsamples=showsamples,
       ##                              plotmeans=plotmeans,
       ##                              datahistogram=TRUE, datascatter=TRUE,
       ##                              useOquantiles=useOquantiles,
@@ -1804,8 +1803,8 @@ inferpopulation <- function(data, metadata, outputdir, nsamples = 1200,
                      paste0('plotsamples_Fdistribution', dashnameroot)),
     mcoutput = c(mcsamples, list(auxmetadata = auxmetadata)),
     data = data,
-    plotuncertainty = 'samples',
-    uncertainty = showsamples, plotmeans = TRUE,
+    plotvariability = 'samples',
+    nsamples = showsamples, plotmeans = TRUE,
     datahistogram = TRUE, datascatter = TRUE,
     useOquantiles = useOquantiles,
     parallel = TRUE, silent = TRUE
@@ -1817,8 +1816,8 @@ inferpopulation <- function(data, metadata, outputdir, nsamples = 1200,
                      paste0('plotquantiles_Fdistribution', dashnameroot)),
     mcoutput = c(mcsamples, list(auxmetadata = auxmetadata)),
     data = data,
-    plotuncertainty = 'quantiles',
-    uncertainty = showquantiles, plotmeans = TRUE,
+    plotvariability = 'quantiles',
+    nsamples = showquantiles, plotmeans = TRUE,
     datahistogram = TRUE, datascatter = TRUE,
     useOquantiles = useOquantiles,
     parallel = TRUE, silent = TRUE

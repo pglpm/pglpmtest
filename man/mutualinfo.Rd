@@ -2,7 +2,7 @@
 % Please edit documentation in R/mutualinfo.R
 \name{mutualinfo}
 \alias{mutualinfo}
-\title{Description}
+\title{Calculate mutual information between groups of joint variates}
 \usage{
 mutualinfo(
   Yvrt,
@@ -39,5 +39,5 @@ workers, or how many to create and use}
 A list with the mutual information, its error, and its unit
 }
 \description{
-Description
+Calculate mutual information between groups of joint variates
 }

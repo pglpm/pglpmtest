@@ -31,8 +31,7 @@ inferpopulation(
 )
 }
 \arguments{
-\item{data}{data.table object or filepath ##Can we make it so that this
-HAS to be data.table?}
+\item{data}{data.table object or filepath: datapoints}
 
 \item{metadata}{Either the name of the csv file containing metadata
 of the current dataset, or a data.frame with the metadata}
